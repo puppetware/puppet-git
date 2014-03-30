@@ -22,4 +22,10 @@ class git::install {
     source => "${source}",
     provider => pkgdmg,
   }
+  ->
+  exec {'echo "/usr/local/git/bin\n$(cat /etc/paths)" > /etc/paths':
+    onlyif => 'test ! `grep -q "/usr/local/git/bin" /etc/paths`',
+    path => ['/usr/bin', '/bin'],
+    user => 'root',
+  }
 }
