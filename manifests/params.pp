@@ -12,6 +12,6 @@
 #
 class git::params {
 
-  $version = '1.8.4.1'
+  $version = '1.9.0'
 
 }

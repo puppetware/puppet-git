@@ -10,7 +10,7 @@ Supported Platforms:
 Usage
 -----
 
-Install Git 1.8.4.1
+Install Git 1.9.0
 
 ```
 class {'git': }
@@ -20,16 +20,16 @@ Install a specific version of Git:
 
 ```
 class {'git':
-  version => '1.8.3.2',
+  version => '1.8.5.2',
 }
 ```
 
 Release List
 ------------
 
-Git maintains a list of available versions on [Google Code] [version-list]
+Git maintains a list of available versions on [SourceForge] [version-list]
 
-[version-list]: https://code.google.com/p/git-osx-installer/
+[version-list]: http://sourceforge.net/projects/git-osx-installer/files/?source=navbar
 
 MIT License
 -----------

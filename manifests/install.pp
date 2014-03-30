@@ -12,10 +12,14 @@
 #
 class git::install {
   $version = $git::version
-  
+
+  $source = $::osfamily ? {
+    'Darwin' => "http://iweb.dl.sourceforge.net/project/git-osx-installer/git-${version}-intel-universal-snow-leopard.dmg",
+  }
+
   package{"git-${version}":
     ensure => installed,
-    source => "https://git-osx-installer.googlecode.com/files/git-${version}-intel-universal-snow-leopard.dmg",
+    source => "${source}",
     provider => pkgdmg,
   }
 }
